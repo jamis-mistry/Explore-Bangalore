@@ -1,0 +1,40 @@
+{
+  "attractions": [
+    {
+      "title": "Vidhana Soudha",
+      "description": "The majestic seat of Karnataka’s state legislature, known for its stunning Dravidian architecture.",
+      "image": "vidhan.jpg",
+      "alt": "Vidhana Soudha"
+    },
+    {
+      "title": "Lalbagh Botanical Garden",
+      "description": "A sprawling 240-acre garden with exotic plants, a glasshouse, and serene lakes.",
+      "image": "lal.webp",
+      "alt": "Lalbagh Botanical Garden"
+    },
+    {
+      "title": "Bangalore Palace",
+      "description": "A royal palace with Tudor-style architecture and lavish interiors, offering a glimpse into Bangalore’s history.",
+      "image": "palace.jpg",
+      "alt": "Bangalore Palace"
+    },
+    {
+      "title": "Cubbon Park",
+      "description": "A lush green oasis in the heart of the city, perfect for leisurely walks and cultural events.",
+      "image": "park.jpg",
+      "alt": "Cubbon Park"
+    },
+    {
+      "title": "ISKCON Temple",
+      "description": "A serene spiritual center dedicated to Lord Krishna, known for its beautiful architecture and vibrant festivals.",
+      "image": "iscon.cms",
+      "alt": "ISKCON Temple"
+    },
+    {
+      "title": "Commercial Street",
+      "description": "A bustling shopping hub offering everything from traditional handicrafts to modern fashion.",
+      "image": "cs.jpg",
+      "alt": "Commercial Street"
+    }
+  ]
+}
