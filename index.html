@@ -1,249 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bangalore Tourism</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome CDN -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournament Creation App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
-  <!-- Navbar -->
-  <nav class="bg-gradient-to-r from-blue-600 to-blue-800 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex items-center">
-          <span class="text-2xl font-bold text-white">Namma Bengaluru</span>
-        </div>
-        <div class="hidden md:flex space-x-6 items-center">
-          <a href="#home" class="text-gray-200 hover:text-yellow-600 transition-colors duration-300 flex items-center gap-2">
-            <i class="fas fa-home"></i> Home
-          </a>
-          <a href="#attractions" class="text-gray-200 hover:text-yellow-600 transition-colors duration-300 flex items-center gap-2">
-            <i class="fas fa-map-marker-alt"></i> Attractions
-          </a>
-          <a href="#gallery" class="text-gray-200 hover:text-yellow-600 transition-colors duration-300 flex items-center gap-2">
-            <i class="fas fa-images"></i> Gallery
-          </a>
-          <a href="#contact" class="text-gray-200 hover:text-yellow-600 transition-colors duration-300 flex items-center gap-2">
-            <i class="fas fa-envelope"></i> Contact
-          </a>
-        </div>
-        <!-- Hamburger Button -->
-        <div class="md:hidden flex items-center p-4">
-          <button id="menu-toggle" class="text-white focus:outline-none">
-            <i class="fas fa-bars fa-lg"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-3 bg-blue-700">
-      <a href="#home" class="block text-gray-200 hover:text-white transition-colors duration-300 flex items-center gap-2">
-        <i class="fas fa-home"></i> Home
-      </a>
-      <a href="#attractions" class="block text-gray-200 hover:text-white transition-colors duration-300 flex items-center gap-2">
-        <i class="fas fa-map-marker-alt"></i> Attractions
-      </a>
-      <a href="#gallery" class="block text-gray-200 hover:text-white transition-colors duration-300 flex items-center gap-2">
-        <i class="fas fa-images"></i> Gallery
-      </a>
-      <a href="#contact" class="block text-gray-200 hover:text-white transition-colors duration-300 flex items-center gap-2">
-        <i class="fas fa-envelope"></i> Contact
-      </a>
-    </div>
-  </nav>
-  <!-- Hero Section -->
-  <section id="home" class="relative bg-cover bg-center h-screen" style="background-image: url('bg.avif');">
-    <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
-        Discover Namma Bengaluru
-      </h1>
-      <p class="text-lg sm:text-xl mb-8 max-w-xl">
-        Explore the vibrant culture, historic landmarks, and lush gardens of Bangalore, the Silicon Valley of India.
-      </p>
-    </div>
-  </section>
-  <!-- Promotional Video Section -->
-  <section id="video" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Experience Bangalore</h2>
-      <div class="flex justify-center">
-        <video controls class="w-full max-w-4xl rounded-lg shadow-md">
-          <source src="bangluru.mp4" type="video/mp4">
-          <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English" default>
-          Your browser does not support the video tag.
-        </video>
-      </div>
-    </div>
-  </section>
-  <!-- Audio Section -->
-  <section id="audio" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Feel the Vibe of Bangalore</h2>
-      <div class="flex justify-center">
-        <audio controls class="w-full max-w-md">
-          <source src="au3.mp3" type="audio/mpeg">
-          Your browser does not support the audio tag.
-        </audio>
-      </div>
-      <p class="text-center text-gray-600 mt-4">Enjoy this soothing instrumental music inspired by Bangalore’s serene landscapes.</p>
-    </div>
-  </section>
-  <!-- Attractions Section -->
-  <section id="attractions" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Top Attractions in Bangalore</h2>
-      <div id="attractions-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-    </div>
-  </section>
-  <!-- Gallery Section -->
-  <section id="gallery" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Gallery of Namma Bengaluru</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <img src="vidhan.jpg" alt="Vidhana Soudha" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-        <img src="lal.webp" alt="Lalbagh" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-        <img src="palace.jpg" alt="Bangalore Palace" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-        <img src="park.jpg" alt="Cubbon Park" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-        <img src="iscon.cms" alt="ISKCON Temple" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-        <img src="cs.jpg" alt="Commercial Street" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-        <img src="nandni.avif" alt="Nandi Hills" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-        <img src="np.jpg" alt="Bannerghatta National Park" class="w-full h-48 object-cover rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
-      </div>
-    </div>
-  </section>
-  <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">Get in Touch</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Contact Form -->
-        <div>
-          <form class="space-y-6">
-            <div>
-              <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-              <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Your Name" required>
-            </div>
-            <div>
-              <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-              <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Your Email" required>
-            </div>
-            <div>
-              <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-              <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500" placeholder="Your Message" required></textarea>
-            </div>
-            <div>
-              <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors duration-300">Send Message</button>
-            </div>
-          </form>
-        </div>
-        <!-- Contact Info -->
-        <div class="space-y-6">
-          <div>
-            <h3 class="text-lg font-semibold text-gray-800">Contact Information</h3>
-            <p class="mt-2 text-gray-600"><i class="fas fa-envelope mr-2"></i> info@nammabengaluru.com</p>
-            <p class="mt-2 text-gray-600"><i class="fas fa-phone mr-2"></i> +91 123-456-7890</p>
-            <p class="mt-2 text-gray-600"><i class="fas fa-map-marker-alt mr-2"></i> Bengaluru, Karnataka, India</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-gray-800">Visit Us</h3>
-            <p class="mt-2 text-gray-600">Plan your trip with us and explore the best of Bangalore!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer class="bg-gradient-to-r from-blue-600 to-blue-800 text-white mt-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Brand and Description -->
-        <div>
-          <span class="text-2xl font-bold text-white">Namma Bengaluru</span>
-          <p class="mt-4 text-gray-200 text-sm leading-relaxed">
-            Discover Bangalore’s rich history, vibrant culture, and iconic landmarks. From Lalbagh to Vidhana Soudha, experience the city’s unique charm.
-          </p>
-          <p class="mt-4 text-gray-200 text-sm">
-            <i class="fas fa-envelope mr-2"></i> info@nammabengaluru.com
-          </p>
-          <div class="mt-4 flex items-center">
-            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-            </svg>
-            <span class="ml-2 text-gray-200 text-sm">Find us in the heart of Karnataka!</span>
-          </div>
-        </div>
-        <!-- Navigation Links -->
-        <div>
-          <h3 class="text-lg font-semibold text-white">Explore</h3>
-          <ul class="mt-4 space-y-3">
-            <li><a href="#home" class="text-gray-200 hover:text-white transition-colors duration-300">Home</a></li>
-            <li><a href="#attractions" class="text-gray-200 hover:text-white transition-colors duration-300">Attractions</a></li>
-            <li><a href="#gallery" class="text-gray-200 hover:text-white transition-colors duration-300">Gallery</a></li>
-            <li><a href="#contact" class="text-gray-200 hover:text-white transition-colors duration-300">Contact</a></li>
-          </ul>
-        </div>
-        <!-- Additional Links -->
-        <div>
-          <h3 class="text-lg font-semibold text-white">More</h3>
-          <ul class="mt-4 space-y-3">
-            <li><a href="#" class="text-gray-200 hover:text-white transition-colors duration-300">About Bengaluru</a></li>
-            <li><a href="#" class="text-gray-200 hover:text-white transition-colors duration-300">Privacy Policy</a></li>
-            <li><a href="#" class="text-gray-200 hover:text-white transition-colors duration-300">Terms of Service</a></li>
-            <li><a href="#" class="text-gray-200 hover:text-white transition-colors duration-300">FAQs</a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- Copyright -->
-      <div class="mt-12 border-t border-gray-300 pt-6 text-center">
-        <p class="text-gray-200 text-sm">© 2025 Namma Bengaluru. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-  <!-- JS to toggle menu and fetch attractions -->
-  <script>
-    const toggleBtn = document.getElementById('menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    toggleBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">Tournament Creation App</h1>
 
-    // Fetch attractions data from JSON file
-    fetch('attractions.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        const attractionsContainer = document.getElementById('attractions-container');
-        data.attractions.forEach(attraction => {
-          const attractionDiv = document.createElement('div');
-          attractionDiv.className = 'bg-gray-100 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300';
-          attractionDiv.innerHTML = `
-            <img src="${attraction.image}" alt="${attraction.alt}" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <h3 class="text-xl font-semibold text-gray-800">${attraction.title}</h3>
-              <p class="mt-2 text-gray-600">${attraction.description}</p>
-            </div>
-          `;
-          attractionsContainer.appendChild(attractionDiv);
-        });
-      })
-      .catch(error => {
-        console.error('Error fetching attractions:', error);
-        const attractionsContainer = document.getElementById('attractions-container');
-        attractionsContainer.innerHTML = '<p class="text-center text-red-600">Failed to load attractions. Please try again later.</p>';
-      });
-  </script>
+        <!-- Registration Form -->
+        <div class="bg-white p-6 rounded shadow-md mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Register</h2>
+            <form id="registerForm" enctype="multipart/form-data">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">Name</label>
+                    <input type="text" id="name" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">Phone Number</label>
+                    <input type="tel" id="phone" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">Profile Picture</label>
+                    <input type="file" id="profile_picture" accept="image/*" class="w-full p-2 border rounded" required>
+                </div>
+                <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Register</button>
+            </form>
+        </div>
+
+        <!-- Tournament Creation Form -->
+        <div class="bg-white p-6 rounded shadow-md mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Create Tournament</h2>
+            <form id="tournamentForm">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">User ID</label>
+                    <input type="number" id="user_id" class="w-full p-2 border rounded" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium">Tournament Name</label>
+                    <input type="text" id="tournament_name" class="w-full p-2 border rounded" required>
+                </div>
+                <button type="submit" class="bg-green-500 text-white p-2 rounded hover:bg-green-600">Create Tournament</button>
+            </form>
+        </div>
+
+        <!-- Users List -->
+        <div class="bg-white p-6 rounded shadow-md mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Registered Users</h2>
+            <div id="usersList" class="grid gap-4"></div>
+        </div>
+
+        <!-- Tournaments List -->
+        <div class="bg-white p-6 rounded shadow-md">
+            <h2 class="text-2xl font-semibold mb-4">Tournaments</h2>
+            <div id="tournamentsList" class="grid gap-4"></div>
+        </div>
+    </div>
+
+    <script src="/js/app.js"></script>
 </body>
 </html>
